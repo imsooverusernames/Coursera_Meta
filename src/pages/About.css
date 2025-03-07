@@ -1,0 +1,46 @@
+.about {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4ce14;
+    color: #fff;
+  }
+  
+  .about h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .about p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .owners {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  
+  .owner {
+    text-align: center;
+  }
+  
+  .owner img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+  }
+  
+  .owner h3 {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  .owner p {
+    font-size: 18px;
+    color: #333;
+  }
+  
