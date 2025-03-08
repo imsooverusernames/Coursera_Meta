@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Menu from './pages/Menu';
-import OrderOnline from './pages/OrderOnline';
 import Reservations from './pages/Reservations';
 import Login from './pages/Login';
 import ConfirmedBooking from './pages/ConfirmedBooking';
@@ -27,7 +26,6 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/menu" element={<><Specials /><Menu /></>} />
           <Route path="/reservations" element={<Reservations />} />
-          <Route path="/order-online" element={<OrderOnline />} />
           <Route path="/login" element={<Login />} />
           <Route path="/booking-confirmed" element={<ConfirmedBooking />} />
         </Routes>

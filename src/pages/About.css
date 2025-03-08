@@ -1,46 +1,70 @@
 .about {
+    display: flex;
+    min-height: 60vh;
+    justify-content: space-between;
     text-align: center;
-    padding: 50px 20px;
+    padding: 50px 8vw;
     background-color: #f4ce14;
-    color: #fff;
+    color: #000000;
   }
-  
-  .about h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+
+  .about-text {
+    width: 40vw;
+    padding-inline: 4rem;
   }
-  
-  .about p {
-    font-size: 18px;
+
+  .about-text h2 {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .about-text p {
+    font-size: 1.4rem;
     color: #333;
     margin-bottom: 30px;
   }
-  
+
   .owners {
+    position: relative;
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
   }
-  
-  .owner {
-    text-align: center;
+
+  .owners img {
+    object-fit: cover;
+    width: 300px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   }
-  
-  .owner img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin-bottom: 15px;
+
+  .a{
+    position: absolute;
+    top: 80px;
+    right: 180px;
+    z-index: 2;
   }
-  
-  .owner h3 {
-    font-size: 22px;
-    font-weight: bold;
+
+  .b {
+    position: absolute;
+    top: 200px;
+    right: 10px;
+    z-index: 1;
   }
-  
-  .owner p {
-    font-size: 18px;
-    color: #333;
+
+  @media screen and (max-width: 1100px) {
+    .about {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .about-text {
+      width: 80vw;
+    }
+
+    .owners {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .owners img {
+      display: none;
+    }
   }
-  

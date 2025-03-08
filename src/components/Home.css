@@ -10,29 +10,30 @@
     text-align: start;
     background-color: #495E57;
     color: white;
-    padding: 40px 80px; /* Add some padding to prevent content from touching the edges */
-    position: relative; /* Make this a reference for absolute positioning */
+    padding: 40px clamp(10vw, 27vw, 20vw);
+    position: relative;
+    margin-bottom: 50px;
   }
-  
+
   .hero-content {
     max-width: 300px;
   }
-  
+
   .hero-title {
     font-size: 3rem;
     font-weight: bold;
     color: #F4CE14;
   }
-  
+
   .hero-subtitle {
     font-size: 2rem;
   }
-  
+
   .hero-text {
     margin-top: 15px;
     font-size: 1.1rem;
   }
-  
+
   .hero-button {
     margin-top: 20px;
     background-color: #F4CE14;
@@ -44,15 +45,36 @@
     border-radius: 8px;
     cursor: pointer;
   }
-  
+
   .hero-button:hover {
     background-color: #e6b800;
   }
-  
+
   .hero-image {
     max-height: 400px;
     border-radius: 10px;
     position: absolute;
-    bottom: -50px; /* Adjust this value to control how much the image overflows */
-    right: 10%; /* Adjust for positioning */
+    bottom: -50px;
+    right: clamp(10vw, 27vw, 20vw);
+  }
+
+  @media (max-width: 1200px) {
+    .hero {
+      padding: 40px clamp(5vw, 10vw, 20vw)
+    }
+
+    .hero-image {
+      right: clamp(5vw, 10vw, 20vw)
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    .hero {
+      justify-content: center;
+    }
+
+    .hero-image {
+      display: none;
+    }
+
   }

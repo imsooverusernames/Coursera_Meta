@@ -1,20 +1,26 @@
-// src/pages/Login.js
 import React, { useState } from 'react';
+import './Login.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle login logic here, like calling an API or validating credentials
+    if (!email || !password) {
+      setError('Please fill in both fields.');
+      return;
+    }
     console.log('Logged in with:', email, password);
+    setError(null);
   };
 
   return (
-    <div>
+    <div className="login-container">
       <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="login-form">
+        {error && <p className="error-message">{error}</p>}
         <label>Email:</label>
         <input
           type="email"
@@ -31,7 +37,7 @@ const Login = () => {
           required
         />
         <br />
-        <button type="submit">Log In</button>
+        <button type="submit" className="login-button">Log In</button>
       </form>
     </div>
   );

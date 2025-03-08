@@ -1,8 +1,11 @@
 import React from "react";
 import "./Home.css";
 import bruschetta from "D:/Coding_Files/Little Lemon/little-lemon/src/assets/restauranfood.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="home-container">
       <section className="hero">
@@ -13,7 +16,7 @@ const Home = () => {
             We are a family-owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </p>
-          <button className="hero-button">Reserve a Table</button>
+          <button className="hero-button" onClick={() => navigate("/reservations")}>Reserve a Table</button>
         </div>
         <img
           src={bruschetta}
