@@ -44,6 +44,14 @@ box-sizing: border-box;
     object-fit: contain;
   }
 
+  .specials h2 {
+    font-size: 1.8rem;
+    color: #333;
+    border-bottom: 2px solid #EE9972;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+
   .special-card h3 {
     font-size: 20px;
   }
